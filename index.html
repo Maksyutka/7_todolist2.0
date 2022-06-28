@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>learnjs</title>
+	</head>
+	<body>
+		<h1 class="title">ToDoList</h1>
+		<div class="container">
+			<div class="todo-inputs-wrapper">
+				<input id="todo-list__input" type="text" placeholder="Enter task name" />
+				<textarea class="todo-dicription" name="discription" placeholder="Enter task discription"></textarea>
+				<button id="todo-list__submit">ADD</button>
+			</div>
+			<div class="todo-list">
+				<p class="todo-list__subtitle">New:</p>
+				<div id="todo-list__new-wrapper"></div>
+			</div>
+			<div class="todo-list">
+				<p class="todo-list__subtitle">In progress:</p>
+				<div id="todo-list__progress-wrapper"></div>
+			</div>
+			<div class="todo-list">
+				<p class="todo-list__subtitle">Done:</p>
+				<div id="todo-list__done-wrapper"></div>
+			</div>
+		</div>
+	</body>
+	<script src="selectors-script.js"></script>
+	<script src="task-items-script.js"></script>
+	<script src="arrays-script.js"></script>
+</html>

@@ -1,0 +1,239 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	background-color: rgb(249, 235, 250);
+}
+
+.title {
+	font-size: 48px;
+	margin: 0;
+	text-align: center;
+	animation: title 0.8s infinite linear;
+	font-weight: 900;
+	-webkit-text-stroke: 1px rgb(57, 42, 58);
+	color: rgb(237, 168, 240);
+}
+
+.container {
+	padding: 15px;
+	display: flex;
+	grid-gap: 5px;
+}
+
+.todo-list {
+	flex-basis: 25%;
+}
+
+.todo-list__inputs-wrapper {
+	display: flex;
+	align-items: center;
+	grid-gap: 8px;
+}
+
+#todo-list__submit {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px;
+	color: #fff;
+	background-color: rgb(237, 168, 240);
+	border-radius: 5px;
+	border: 2px solid rgb(237, 168, 240);
+	height: 64px;
+	width: 100%;
+}
+
+#todo-list__submit:hover {
+	background-color: rgb(239, 205, 240);
+	cursor: pointer;
+	border: 2px solid rgb(239, 205, 240);
+}
+
+#todo-list__submit:active {
+	background-color: rgb(255, 255, 255);
+	color: rgb(239, 205, 240);
+	border: 2px solid rgb(239, 205, 240);
+}
+
+#todo-list__input {
+	font-weight: 700;
+	padding: 5px;
+	font-size: 13px;
+	outline: none;
+	border-radius: 5px;
+	border: 2px solid rgb(237, 168, 240);
+	height: 49px;
+	background-color: rgb(250, 245, 250);
+	color: rgb(57, 42, 58);
+	width: 100%;
+}
+
+.todo-list__subtitle {
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	font-size: 16px;
+	color: rgb(57, 42, 58);
+	margin: 8px 0;
+	height: 49px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#todo-list__new-wrapper,
+#todo-list__progress-wrapper,
+#todo-list__done-wrapper {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 7px;
+	margin-top: 7px;
+}
+
+.todo-list__item {
+	border-radius: 5px;
+	border: 2px solid rgb(237, 168, 240);
+	color: rgb(57, 42, 58);
+	background-color: rgb(250, 245, 250);
+}
+
+.todo-list__upper-block {
+	display: flex;
+	align-items: center;
+	padding: 5px 15px;
+	height: 59px;
+	width: 100%;
+}
+
+.todo-list__lower-block {
+	padding: 0px 15px;
+	height: 0;
+	overflow: hidden;
+}
+
+.todo-list__lower-content {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 700;
+	color: rgb(78, 69, 78);
+}
+
+.todo-list__item:hover .todo-list__lower-block {
+	height: auto;
+	padding: 0px 15px 10px 15px;
+}
+
+#todo-list__progress-wrapper .todo-list__item {
+	animation: blink 0.8s infinite linear;
+}
+
+@keyframes blink {
+	0% {
+		box-shadow: 0px 0px 0px 2px transparent;
+	}
+
+	50% {
+		box-shadow: 0px 0px 0px 2px rgb(237, 168, 240);
+	}
+
+	100% {
+		box-shadow: 0px 0px 0px 2px transparent;
+	}
+}
+
+#todo-list__done-wrapper .todo-list__item {
+	opacity: 0.5;
+}
+
+.todo-list__item-index {
+	margin-right: 5px;
+}
+
+.todo-list__item-name {
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.todo-list__item-delete {
+	margin-left: 5px;
+	height: 29px;
+	width: 29px;
+	position: relative;
+	border: 2px solid rgb(237, 168, 240);
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.todo-list__item-delete:hover {
+	opacity: 0.7;
+}
+
+.todo-list__item-delete::before {
+	content: "";
+	width: 20px;
+	transform: rotate(45deg);
+	border-bottom: 2px solid #000;
+	display: inline-block;
+	border-color: crimson;
+	position: absolute;
+	right: 2px;
+	top: 12px;
+}
+
+.todo-list__item-delete::after {
+	content: "";
+	width: 20px;
+	transform: rotate(-45deg);
+	border-bottom: 2px solid #000;
+	display: inline-block;
+	position: absolute;
+	border-color: crimson;
+	right: 2px;
+	top: 12px;
+}
+
+.todo-inputs-wrapper {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 5px;
+	flex-basis: 25%;
+}
+
+.todo-dicription {
+	width: 100%;
+	resize: none;
+	border: 2px solid rgb(237, 168, 240);
+	border-radius: 5px;
+	outline: none;
+	background-color: rgb(250, 245, 250);
+	font-size: 13px;
+	color: rgb(57, 42, 58);
+	font-weight: 700;
+	padding: 5px;
+	height: 204px;
+}
+
+.todo-dicription::placeholder {
+	font-size: 13px;
+	color: rgb(57, 42, 58);
+	font-weight: 700;
+}
+
+.task-status {
+	margin-left: auto;
+	height: 29px;
+	background-color: rgb(250, 245, 250);
+	border: 2px solid rgb(237, 168, 240);
+	border-radius: 5px;
+	color: rgb(57, 42, 58);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.task-status:hover {
+	opacity: 0.7;
+}
